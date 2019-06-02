@@ -1,0 +1,309 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Verbs for Batch-Processing · </title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;!-- # This is a link to [another document.](/tmplats-doc/docs/doc3)  "/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Verbs for Batch-Processing · "/><meta property="og:type" content="website"/><meta property="og:url" content="https://sparverius.github.io/tmplats-doc/"/><meta property="og:description" content="&lt;!-- # This is a link to [another document.](/tmplats-doc/docs/doc3)  "/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/tmplats-doc/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/tmplats-doc/css/main.css"/><script src="/tmplats-doc/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/tmplats-doc/"><img class="logo" src="/tmplats-doc/img/favicon.ico" alt=""/><h2 class="headerTitleWithLogo"></h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/tmplats-doc/docs/doc4" target="_self">Install</a></li><li class=""><a href="/tmplats-doc/docs/doc1" target="_self">Docs</a></li><li class=""><a href="/tmplats-doc/help" target="_self">Help</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Verbs</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Verbs</h3><ul class=""><li class="navListItem navListItemActive"><a class="navItem" href="/tmplats-doc/docs/doc2">Verbs for Batch-Processing</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">TODO</h3><ul class=""><li class="navListItem"><a class="navItem" href="/tmplats-doc/docs/doc3">This is document number 3</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Verbs for Batch-Processing</h1></header><article><div><span><!-- # This is a link to [another document.](/tmplats-doc/docs/doc3)  
+// # This is a link to an [external page.](http://www.example.com)
+-->
+<h2><a class="anchor" aria-hidden="true" id="verbs-for-batch-processing"></a><a href="#verbs-for-batch-processing" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Verbs for Batch-Processing</h2>
+<p>When teaching functional programming, I often get a question like**:
+How can one access an element in a list when given the index of the
+element? It is mostly likely that the person who asks this question
+is still of a mentality that focuses on what I call individual-processing
+(instead of batch-processing).</p>
+<p>In functional programming, batch-processing is commonly associated with
+the use of combinators (which are often higher-order functions of relatively
+small bodies). Temptory strongly advocates batch-processing. And it does so
+by making extensive use of templates.</p>
+<h2><a class="anchor" aria-hidden="true" id="commonly-used-verbs"></a><a href="#commonly-used-verbs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Commonly used Verbs</h2>
+<p>I list as follows some commonly used verbs and their variations in
+the context of batch-processing elements sequentially. Note that an
+implementation of a verb for a particular datatype is often referred
+to as a combinator.</p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="verbs"></a><a href="#verbs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Verbs</h2>
+<ul>
+<li><p><code>listize</code>:
+It is for turning a given sequence into a linear list</p></li>
+<li><p><code>rlistize</code>:
+It is for turning a given sequence into a linear list
+in the reverse order</p></li>
+<li><p><code>streamize</code>:
+It is for turning a given sequence into a linear stream</p></li>
+<li><p><code>forall</code>:
+It is for processing a given sequence
+until the processing function returns false.</p></li>
+<li><p><code>exists</code>:
+It is for processing a given sequence
+until the processing function returns true.</p></li>
+<li><p><code>foreach</code>:
+It is for processing a given sequence in its entirety.</p></li>
+<li><p><code>foldleft</code>:
+It is for processing a given sequence in its entirety and returning
+the accumulated result at the end</p></li>
+<li><p><code>map_list</code>: It is for applying a give function to each element in a
+given sequence and returning a linear list consisting of the results
+of these applications in the order as they are produced.</p></li>
+<li><p><code>map_rlist</code>: It is for applying a give function to each element in a
+given sequence and returning a linear list consisting of the results
+of these applications in the reverse order as they are produced.</p></li>
+<li><p><code>map_stream</code>:
+It is for lazily applying a give function to each element in a given
+sequence and returning a linear stream consisting of the results of
+these applications in the order as they are produced.</p></li>
+</ul>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="r-verbs"></a><a href="#r-verbs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>R Verbs</h2>
+<p>R verbs are equivalent to the verbs on the right however, </br>
+processing is done in reverse order</p>
+<ul>
+<li><code>rexists</code>: <code>exists</code></li>
+<li><code>rforall</code>: <code>forall</code></li>
+<li><code>rforeach</code>: <code>foreach</code></li>
+<li><code>foldright</code>: <code>foldleft</code></li>
+<li><code>rmap_list</code>: <code>map_list</code></li>
+<li><code>rmap_rlist</code>: <code>map_rlist</code></li>
+</ul>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="i-verbs"></a><a href="#i-verbs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>I Verbs</h2>
+<p>Given a sequence, the i-version of the sequence consists of pairs
+where each pair is the index of an element coupled with the element
+itself. For instance, the i-version of the list <code>(a, b, c)</code> is simply
+<code>((0, a), (1, b), (2, c))</code>.</p>
+<p>Given a verb, the i-version of the verb is often named <code>i{verb}</code>,
+where <code>{verb}</code> stands for the name of the verb.  Basically, applying
+the i-version of a verb to a given sequence is like applying the verb
+to the i-version of the sequence.</p>
+<ul>
+<li><p><code>iexists</code>: It is the i-version of <code>exists</code></p></li>
+<li><p><code>iforall</code>: It is the i-version of <code>forall</code></p></li>
+<li><p><code>iforeach</code>: It is the i-version of <code>foreach</code></p></li>
+<li><p><code>ifoldleft</code>: It is the i-version of <code>foldleft</code></p></li>
+<li><p><code>imap_list</code>: It is the i-version of <code>map_list</code>.</p></li>
+<li><p><code>imap_rlist</code>: It is the i-version of <code>map_rlist</code>.</p></li>
+<li><p><code>imap_stream</code>: It is the i-version of <code>map_stream</code>.</p></li>
+</ul>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="z-verbs"></a><a href="#z-verbs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Z Verbs</h2>
+<p>Given two sequences <code>xs</code> and <code>ys</code>, let <code>zip(xs, ys)</code> be the result of
+zipping <code>xs</code> and <code>ys</code>. Given a verb, the z-version of the verb is
+often named <code>z{verb}</code> where <code>{verb}</code> stands for the name of the
+verb. Basically, applying the z-version of a verb to two given
+sequences <code>xs</code> and <code>ys</code> is like applying the verb to <code>zip(xs, ys)</code>.</p>
+<ul>
+<li><p><code>zforall</code>: It is the z-version of <code>forall</code>.</p></li>
+<li><p><code>zforeach</code>: It is the z-version of <code>foreach</code>.</p></li>
+<li><p><code>zfoldleft</code>: It is the z-version of <code>foldleft</code>.</p></li>
+<li><p><code>zmap_list</code>: It is the z-version of <code>map_list</code>.</p></li>
+<li><p><code>zmap_rlist</code>: It is the z-version of <code>map_rlist</code>.</p></li>
+<li><p><code>zmap_stream</code>: It is the z-version of <code>map_stream</code>.</p></li>
+</ul>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="x-verbs"></a><a href="#x-verbs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>X Verbs</h2>
+<p>Given two sequences <code>xs</code> and <code>ys</code>, let <code>cross(xs, ys)</code> be the result
+of crossing <code>xs</code> by <code>ys</code>. Given a verb, the x-version of the verb is
+often named <code>x{verb}</code> where <code>{verb}</code> stands for the name of the
+verb. Basically, applying the z-version of a verb to two given
+sequences <code>xs</code> and <code>ys</code> is like applying the verb to <code>cross(xs, ys)</code>.</p>
+<ul>
+<li><p><code>xforall</code>: It is the z-version of <code>forall</code>.</p></li>
+<li><p><code>xforeach</code>: It is the x-version of <code>foreach</code>.</p></li>
+<li><p><code>xfoldleft</code>: It is the x-version of <code>foldleft</code>.</p></li>
+<li><p><code>xmap_list</code>: It is the x-version of <code>map_list</code>.</p></li>
+<li><p><code>xmap_rlist</code>: It is the x-version of <code>map_rlist</code>.</p></li>
+<li><p><code>xmap_stream</code>: It is the x-version of <code>map_stream</code>.</p></li>
+</ul>
+<hr>
+<p>I will be introducing more verbs elsewhere. My own experience
+indicates that the above list of verbs are already adequate for
+average programming needs.</p>
+<h2><a class="anchor" aria-hidden="true" id="verb-dependencies-in-the-gseq-package"></a><a href="#verb-dependencies-in-the-gseq-package" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Verb Dependencies in the GSEQ package</h2>
+<p>Given two verbs <code>verb1</code> and <code>verb2</code>, I write <code>verb1 &lt; verb2</code> to mean
+that there is an implementation of <code>verb2</code> that depends on <code>verb1</code>. In
+other words, <code>verb2</code> is available for use as long as <code>verb1</code> is
+implemented. In the terms of OOP, one may see <code>verb2</code> as a method
+whose implementation calls anther method <code>verb1</code>.  If <code>verb2</code> depends
+on <code>verb1</code>, I may also say <code>verb1</code> supports <code>verb2</code>.</p>
+<p>In the GSEQ package, the following verb dependecies exist:</p>
+<ul>
+<li><p>streamize &lt; forall</p></li>
+<li><p>forall &lt; exists</p></li>
+<li><p>forall &lt; foreach</p></li>
+<li><p>foreach &lt; foldleft</p></li>
+<li><p>foldleft &lt; listize</p></li>
+<li><p>rlistize &lt; rforall</p></li>
+<li><p>foldleft &lt; rlistize</p></li>
+<li><p>foldleft &lt; map_list</p></li>
+<li><p>foldleft &lt; map_rlist</p></li>
+<li><p>streamize &lt; map_stream</p></li>
+<li><p>foldleft &lt; imap_list</p></li>
+<li><p>foldleft &lt; imap_rlist</p></li>
+<li><p>streamize &lt; imap_stream</p></li>
+<li><p>forall &lt; iforall</p></li>
+<li><p>iforall &lt; iexists</p></li>
+<li><p>iforall &lt; iforeach</p></li>
+<li><p>iforeach &lt; ifoldleft</p></li>
+<li><p>rforall &lt; rexists</p></li>
+<li><p>rforall &lt; rforeach</p></li>
+<li><p>rforeach &lt; foldright</p></li>
+</ul>
+<p>There is really no need to memorize these verb dependencies at this
+point.  All one really should be clear about for now is that if
+<code>streamize</code> is implemented, then all of the other verbs are available
+for use. And please note that all of the verbs are given tail-recursive
+implementations in the GSEQ package.</p>
+<h2><a class="anchor" aria-hidden="true" id="let-s-see-some-verbs-in-action"></a><a href="#let-s-see-some-verbs-in-action" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Let's see some verbs in action!</h2>
+<p>The famous 8-queen puzzle asks the player to find ways to put eight
+queen pieces on a chess board such that no queen piece can attack any
+other ones. In other words, no two queen pieces can be put on the same
+row, the same column, or the same diagnal.</p>
+<p>Let us first declare an abstract type <code>board</code> for values representing
+board configurations and then implement it as a list:</p>
+<pre><code class="hljs css language-ats"><span class="hljs-comment">(* ****** ****** *)</span>
+
+abstbox board = ptr
+
+<span class="hljs-comment">(* ****** ****** *)</span>
+
+extern
+fun
+board_nil(): board
+<span class="hljs-keyword">and</span>
+board_cons(int, board): board
+
+<span class="hljs-comment">(* ****** ****** *)</span>
+
+<span class="hljs-keyword">local</span>
+
+absimpl board = list0(int)
+
+<span class="hljs-keyword">in</span><span class="hljs-comment">(* in-of-local *)</span>
+
+implement
+board_nil() = <span class="hljs-keyword">nil</span>()
+implement
+board_cons(x0, xs) = cons(x0, xs)
+
+implement
+gseq_streamize&lt;board&gt;&lt;int&gt;(xs) = list0_streamize&lt;int&gt;(xs)
+
+<span class="hljs-keyword">end</span> <span class="hljs-comment">(* end of [local] *)</span>
+
+</code></pre>
+<p>Note that the verb <code>streamize</code> is implemented for <code>board</code>, which
+immidiately makes all of the other verbs listed above available for
+use.</p>
+<p>For instance, the following function <code>board_check</code> can be called to
+check if putting a queen piece at column <code>x0</code> on the next row can
+cause a conflict with the queen pieces on the current board <code>xs</code>:</p>
+<pre><code class="hljs css language-ats"><span class="hljs-function"><span class="hljs-keyword">fun</span>
+<span class="hljs-title">board_check</span></span>
+(<span class="hljs-symbol">x0:</span> int, <span class="hljs-symbol">xs:</span> board): bool =
+(
+gseq_iforall&lt;board&gt;&lt;int&gt;(xs)
+) where
+{
+implement
+gseq_iforall$test&lt;int&gt;(i1, x1) =
+<span class="hljs-keyword">if</span> (x0 != x1) <span class="hljs-keyword">then</span> (abs(x0 - x1) != i1 + <span class="hljs-number">1</span>) <span class="hljs-keyword">else</span> <span class="hljs-literal">false</span>
+}
+</code></pre>
+<p>Note that <code>abs</code> stands for the absolute value function.
+The next function <code>board_print</code> is for printing out a given board:</p>
+<pre><code class="hljs css language-ats"><span class="hljs-function"><span class="hljs-keyword">fun</span>
+<span class="hljs-title">board_print</span></span>
+(<span class="hljs-symbol">xs:</span> board): void =
+(
+gseq_rforeach&lt;board&gt;&lt;int&gt;
+  (xs)
+) where
+{
+implement
+gseq_rforeach$work&lt;int&gt;(x0) =
+(
+  loop(<span class="hljs-number">0</span>)
+) where
+{
+<span class="hljs-function"><span class="hljs-keyword">fun</span>
+<span class="hljs-title">loop</span></span>(<span class="hljs-symbol">i0:</span> int): void =
+<span class="hljs-keyword">if</span>
+i0 &gt;= N
+<span class="hljs-keyword">then</span>
+println!((*void*))
+<span class="hljs-keyword">else</span>
+(
+<span class="hljs-keyword">if</span> i0 = x0 <span class="hljs-keyword">then</span> print <span class="hljs-string">"Q "</span> <span class="hljs-keyword">else</span> print <span class="hljs-string">". "</span>; loop(i0+<span class="hljs-number">1</span>)
+)
+}
+} (* <span class="hljs-keyword">end</span> <span class="hljs-keyword">of</span> [board_print *)
+</code></pre>
+<p>Note that the verb <code>rforeach</code> is used because the list representation
+of a board actually represents the board in the reverse order: the
+first element in the list represents the column position of the last
+queen piece and the last element in the list represents the column
+position of the first queen piece. For instance, Solution#1 is printed
+out as follows:</p>
+<pre><code class="hljs">Solution#1:
+Q . . . . . . . 
+<span class="hljs-bullet">. </span>. . . Q . . . 
+<span class="hljs-bullet">. </span>. . . . . . Q 
+<span class="hljs-bullet">. </span>. . . . Q . . 
+<span class="hljs-bullet">. </span>. Q . . . . . 
+<span class="hljs-bullet">. </span>. . . . . Q . 
+<span class="hljs-bullet">. </span>Q . . . . . . 
+<span class="hljs-bullet">. </span>. . Q . . . . 
+</code></pre>
+<p>Please find the entirety of the implementation <a href="./CODE/QueenPuzzle.dats">here</a>.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/tmplats-doc/docs/doc1"><span class="arrow-prev">← </span><span>Introduction</span></a><a class="docs-next button" href="/tmplats-doc/docs/doc3"><span>This is document number 3</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#verbs-for-batch-processing">Verbs for Batch-Processing</a></li><li><a href="#commonly-used-verbs">Commonly used Verbs</a></li><li><a href="#verbs">Verbs</a></li><li><a href="#r-verbs">R Verbs</a></li><li><a href="#i-verbs">I Verbs</a></li><li><a href="#z-verbs">Z Verbs</a></li><li><a href="#x-verbs">X Verbs</a></li><li><a href="#verb-dependencies-in-the-gseq-package">Verb Dependencies in the GSEQ package</a></li><li><a href="#let-s-see-some-verbs-in-action">Let's see some verbs in action!</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2019 sparverius</section></footer></div></body></html>
