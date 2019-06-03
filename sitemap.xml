@@ -9,8 +9,10 @@
 <url> <loc>https://sparverius.github.io/tmplats-doc/blog/2017/04/10/blog-post-two</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
 <url> <loc>https://sparverius.github.io/tmplats-doc/blog/2016/03/11/blog-post</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
 <url> <loc>https://sparverius.github.io/tmplats-doc/docs/doc1</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://sparverius.github.io/tmplats-doc/docs/doc1" /> </url>
+<url> <loc>https://sparverius.github.io/tmplats-doc/docs/doc2-1</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://sparverius.github.io/tmplats-doc/docs/doc2-1" /> </url>
 <url> <loc>https://sparverius.github.io/tmplats-doc/docs/doc2</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://sparverius.github.io/tmplats-doc/docs/doc2" /> </url>
 <url> <loc>https://sparverius.github.io/tmplats-doc/docs/doc3</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://sparverius.github.io/tmplats-doc/docs/doc3" /> </url>
 <url> <loc>https://sparverius.github.io/tmplats-doc/docs/doc4</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://sparverius.github.io/tmplats-doc/docs/doc4" /> </url>
 <url> <loc>https://sparverius.github.io/tmplats-doc/docs/doc5</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://sparverius.github.io/tmplats-doc/docs/doc5" /> </url>
+<url> <loc>https://sparverius.github.io/tmplats-doc/docs/io</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://sparverius.github.io/tmplats-doc/docs/io" /> </url>
 </urlset>
