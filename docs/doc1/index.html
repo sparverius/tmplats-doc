@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Temptory · ATS-Temptory</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;h3&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;for-installing&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#for-installing&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;For installing:&lt;/h3&gt;
 "/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Temptory · ATS-Temptory"/><meta property="og:type" content="website"/><meta property="og:url" content="https://sparverius.github.io/tmplats-doc/"/><meta property="og:description" content="&lt;h3&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;for-installing&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#for-installing&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;For installing:&lt;/h3&gt;
-"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/tmplats-doc/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css"/><script>
+"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/tmplats-doc/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
               (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
               (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
               m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -91,11 +91,11 @@ function is designated for testing equality on elements of this type).</p>
 <p>There is no polymorphic equality in Temptory. In order to test whether
 two given lists (of the same generic type) are equal, one could try to
 implement a function template of the following type:</p>
-<pre><code class="hljs">extern
-<span class="hljs-function"><span class="hljs-keyword">fun</span>
-{<span class="hljs-title">a</span></span>:tflt}
+<pre><code class="hljs css language-ats"><span class="hljs-keyword">extern</span>
+<span class="hljs-keyword">fun</span>
+<span class="hljs-class">{a:tflt}</span>
 list0_fequal
-(<span class="hljs-symbol">xs:</span> list0(a), <span class="hljs-symbol">ys:</span> list0(a), <span class="hljs-symbol">eq:</span> (a, a) -&gt; bool): bool
+(xs<span class="hljs-type">: list0(a)</span>, ys<span class="hljs-type">: list0(a)</span>, eq: (a, a) <span class="hljs-operator">-&gt;</span> <span class="hljs-built_in">bool</span>)<span class="hljs-type">: bool</span>
 </code></pre>
 <p>This is a workable solution based on higher-order function
 but it suffers from the requirement that each caller of <code>list0_fequal</code>
@@ -105,52 +105,52 @@ on elements in the two given lists).</p>
 <p>Let us see a template-based solution to implementing equality test on
 lists. In Temptory, the name <code>gequal$val</code> refers to a template of the
 following interface:</p>
-<pre><code class="hljs css language-C">fun
-{a:tflt}
-gequal$val(a, a): <span class="hljs-keyword">bool</span>
+<pre><code class="hljs css language-ats"><span class="hljs-keyword">fun</span>
+<span class="hljs-class">{a:tflt}</span>
+gequal<span class="hljs-meta">$val</span>(a, a)<span class="hljs-type">: bool</span>
 </code></pre>
 <p>Note that the sort <code>tflt</code> indicates the type variable
 <code>a</code> range over flat types (that is, types of unspecified sizes).
 A function <code>list0_equal</code> can be defined as follows to test whether two
 given lists are equal by calling <code>gequal$val</code> to test equality on elements:</p>
-<pre><code class="hljs css language-C"><span class="hljs-keyword">extern</span>
-fun
-{a:tflt}
+<pre><code class="hljs css language-ats"><span class="hljs-keyword">extern</span>
+<span class="hljs-keyword">fun</span>
+<span class="hljs-class">{a:tflt}</span>
 list0_equal
-(xs: list0(a), ys: list0(a)): <span class="hljs-keyword">bool</span>
+(xs<span class="hljs-type">: list0(a)</span>, ys<span class="hljs-type">: list0(a)</span>)<span class="hljs-type">: bool</span>
 
-implement
-{a}(*tmp*)
+<span class="hljs-keyword">implement</span>
+<span class="hljs-class">{a}</span><span class="hljs-comment">(*tmp*)</span>
 list0_equal
   (xs, ys) =
-( loop(xs, ys) ) where
+( loop(xs, ys) ) <span class="hljs-keyword">where</span>
 {
-fun
+<span class="hljs-keyword">fun</span>
 loop
-( xs: list0(a)
-, ys: list0(a) ): <span class="hljs-keyword">bool</span> =
+( xs<span class="hljs-type">: list0(a)</span>
+, ys<span class="hljs-type">: list0(a)</span> )<span class="hljs-type">: bool</span> =
 (
-<span class="hljs-keyword">case</span>+ xs of
-| list0_nil() =&gt;
+<span class="hljs-keyword">case</span>+ xs <span class="hljs-keyword">of</span>
+| list0_nil() <span class="hljs-operator">=&gt;</span>
   (
-  <span class="hljs-keyword">case</span>+ ys of
-  | list0_nil() =&gt; <span class="hljs-literal">true</span>
-  | list0_cons _ =&gt; <span class="hljs-literal">false</span>
+  <span class="hljs-keyword">case</span>+ ys <span class="hljs-keyword">of</span>
+  | list0_nil() <span class="hljs-operator">=&gt;</span> <span class="hljs-literal">true</span>
+  | list0_cons _ <span class="hljs-operator">=&gt;</span> <span class="hljs-literal">false</span>
   )
-| list0_cons(x0, xs) =&gt;
+| list0_cons(x0, xs) <span class="hljs-operator">=&gt;</span>
   (
-  <span class="hljs-keyword">case</span>+ ys of
-  | list0_nil() =&gt; <span class="hljs-literal">true</span>
-  | list0_cons(y0, ys) =&gt;
-    let
-      val ans =
-      gequal$val&lt;a&gt;(x0, y0)
-    in
-      <span class="hljs-keyword">if</span> ans then loop(xs, ys) <span class="hljs-keyword">else</span> <span class="hljs-literal">false</span>
-    end
+  <span class="hljs-keyword">case</span>+ ys <span class="hljs-keyword">of</span>
+  | list0_nil() <span class="hljs-operator">=&gt;</span> <span class="hljs-literal">true</span>
+  | list0_cons(y0, ys) <span class="hljs-operator">=&gt;</span>
+    <span class="hljs-keyword">let</span>
+      <span class="hljs-keyword">val</span> ans =
+      gequal<span class="hljs-meta">$val</span><span class="hljs-class">&lt;<span class="hljs-title">a</span>&gt;</span>(x0, y0)
+    <span class="hljs-keyword">in</span>
+      <span class="hljs-keyword">if</span> ans <span class="hljs-keyword">then</span> loop(xs, ys) <span class="hljs-keyword">else</span> <span class="hljs-literal">false</span>
+    <span class="hljs-keyword">end</span>
   )
-) (* end of [loop] *)
-} (* end of [list0_equal] *)
+) <span class="hljs-comment">(* end of [loop] *)</span>
+} <span class="hljs-comment">(* end of [list0_equal] *)</span>
 </code></pre>
 <p>Note that <code>gequal$val</code> is already given a standard implementation on
 basic types like int, bool, char, string, etc. If <code>list0_equal</code> is
@@ -161,16 +161,16 @@ compiling <code>list0_equal&lt;int&gt;</code>.</p>
 implemented in the body of a function. For instance, the previous template
 <code>list0_fequal</code> can be given an implementation based on <code>list0_equal</code>
 as follows:</p>
-<pre><code class="hljs css language-ats">implement
-<span class="hljs-comment">{a}</span><span class="hljs-comment">(*tmp*)</span>
+<pre><code class="hljs css language-ats"><span class="hljs-keyword">implement</span>
+<span class="hljs-class">{a}</span><span class="hljs-comment">(*tmp*)</span>
 list0_fequal
   (xs, ys, eq) =
 (
-  list0_equal&lt;a&gt;(xs, ys)
+  list0_equal<span class="hljs-class">&lt;<span class="hljs-title">a</span>&gt;</span>(xs, ys)
 ) <span class="hljs-keyword">where</span>
-<span class="hljs-comment">{
-  implement gequal$val&lt;a&gt;(x, y) = eq(x, y)
-}</span>
+{
+  <span class="hljs-keyword">implement</span> gequal<span class="hljs-meta">$val</span><span class="hljs-class">&lt;<span class="hljs-title">a</span>&gt;</span>(x, y) = eq(x, y)
+}
 </code></pre>
 <p>It will beome clear soon that the embeddability of templates can have
 great impact on the way in which a program is structured.</p>
