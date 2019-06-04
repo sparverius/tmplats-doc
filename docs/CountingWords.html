@@ -1,0 +1,312 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Counting Words · Temptory</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;h4&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;written-by-hongwei-xi-the-creator-of-ats&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#written-by-hongwei-xi-the-creator-of-ats&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Written by: Hongwei Xi (the creator of ATS)&lt;/h4&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Counting Words · Temptory"/><meta property="og:type" content="website"/><meta property="og:url" content="https://sparverius.github.io/tmplats-doc/"/><meta property="og:description" content="&lt;h4&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;written-by-hongwei-xi-the-creator-of-ats&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#written-by-hongwei-xi-the-creator-of-ats&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Written by: Hongwei Xi (the creator of ATS)&lt;/h4&gt;
+"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/tmplats-doc/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-129086874-3', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/tmplats-doc/css/main.css"/><script src="/tmplats-doc/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/tmplats-doc/"><img class="logo" src="/tmplats-doc/img/favicon.ico" alt="Temptory"/><h2 class="headerTitleWithLogo">Temptory</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/tmplats-doc/docs/doc4" target="_self">Install</a></li><li class="siteNavGroupActive"><a href="/tmplats-doc/docs/doc1" target="_self">Docs</a></li><li class=""><a href="/tmplats-doc/help" target="_self">Help</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>CodeBook</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Temptory</h3><ul class=""><li class="navListItem"><a class="navItem" href="/tmplats-doc/docs/doc1">Introduction</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Verbs</h3><ul class=""><li class="navListItem"><a class="navItem" href="/tmplats-doc/docs/doc2">Verbs for Batch-Processing</a></li><li class="navListItem"><a class="navItem" href="/tmplats-doc/docs/doc2-1">Verbs in Action</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Verbs [Linear]</h3><ul class=""><li class="navListItem"><a class="navItem" href="/tmplats-doc/docs/doc3">Verbs for Linear Batch-Processing</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">CodeBook</h3><ul class=""><li class="navListItem"><a class="navItem" href="/tmplats-doc/docs/HelloWorld">Hello, World!</a></li><li class="navListItem"><a class="navItem" href="/tmplats-doc/docs/ReadFromSTDIN">ReadFromSTDIN</a></li><li class="navListItem"><a class="navItem" href="/tmplats-doc/docs/ReadFromSTDIN2">ReadFromSTDIN (2)</a></li><li class="navListItem"><a class="navItem" href="/tmplats-doc/docs/LongestLine">Longest Line</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/tmplats-doc/docs/CountingWords">Counting Words</a></li><li class="navListItem"><a class="navItem" href="/tmplats-doc/docs/CountingWords2">Counting Words (2)</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">IO</h3><ul class=""><li class="navListItem"><a class="navItem" href="/tmplats-doc/docs/io">Under Construction</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Counting Words</h1></header><article><div><span><h4><a class="anchor" aria-hidden="true" id="written-by-hongwei-xi-the-creator-of-ats"></a><a href="#written-by-hongwei-xi-the-creator-of-ats" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Written by: Hongwei Xi (the creator of ATS)</h4>
+<h2><a class="anchor" aria-hidden="true" id="intro"></a><a href="#intro" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Intro</h2>
+<p>This example gives an implementation that counts words in
+a given source and then sorts these words according to their
+frequencies.</p>
+<p>I regard it as a good programming style to introduce
+type definitions for various concepts occurring in the code:</p>
+<pre><code class="hljs css language-ats"><span class="hljs-comment">//</span>
+<span class="hljs-keyword">typedef</span> word = <span class="hljs-built_in">string</span>
+<span class="hljs-keyword">typedef</span> iword = (int, <span class="hljs-built_in">string</span>)
+<span class="hljs-comment">//</span>
+<span class="hljs-keyword">typedef</span> words = list0(word)
+<span class="hljs-keyword">typedef</span> iwords = list0(iword)
+<span class="hljs-comment">//</span>
+</code></pre>
+<p>The type <code>iword</code> is just for each pair consisting of an int-value and a
+string-value.</p>
+<p>Let us first read all the words from the standard input (STDIN):</p>
+<pre><code class="hljs css language-ats"><span class="hljs-keyword">val</span> words =
+FILEref_streamize_word(the_stdin())
+</code></pre>
+<p>At the this point, <code>words</code> is a linear stream of string-values. We can
+turn this stream into a linear list:</p>
+<pre><code class="hljs css language-ats"><span class="hljs-keyword">val</span> words = listize(words)
+</code></pre>
+<p>As we do not plan to use a linear list in this example, we turn this linear
+list into a non-linear list:</p>
+<pre><code class="hljs css language-ats"><span class="hljs-keyword">val</span> words = list0_vt2t(words)
+</code></pre>
+<p>Then we can merge-sort the list of words obtained so far:</p>
+<pre><code class="hljs css language-ats"><span class="hljs-keyword">val</span> words = mergesort(words)
+</code></pre>
+<p>At this point, we have a list of words sorted according to the standard lexicographic
+ordering on string-values.</p>
+<p>The next step is to turn the sorted list of words into a list of iword-values:</p>
+<pre><code class="hljs css language-ats"><span class="hljs-keyword">val</span> iwords =
+(
+  loop(words)
+) <span class="hljs-keyword">where</span>
+{
+<span class="hljs-keyword">fun</span>
+loop(xs<span class="hljs-type">: words</span>)<span class="hljs-type">: iwords</span> =
+(
+<span class="hljs-keyword">case</span>+ xs <span class="hljs-keyword">of</span>
+| <span class="hljs-literal">nil</span>() <span class="hljs-operator">=&gt;</span> <span class="hljs-literal">nil</span>()
+| cons(x0, xs) <span class="hljs-operator">=&gt;</span> loop2(xs, x0, <span class="hljs-number">1</span>, <span class="hljs-literal">nil</span>())
+) <span class="hljs-comment">(* end of [loop] *)</span>
+
+<span class="hljs-keyword">and</span>
+loop2
+( xs<span class="hljs-type">: words</span>
+, x0<span class="hljs-type">: word</span>, i0<span class="hljs-type">: int</span>
+, res<span class="hljs-type">: iwords</span>)<span class="hljs-type">: iwords</span> =
+(
+<span class="hljs-keyword">case</span>+ xs <span class="hljs-keyword">of</span>
+| <span class="hljs-literal">nil</span>() <span class="hljs-operator">=&gt;</span> 
+  cons((i0, x0), res)
+| cons(x1, xs) <span class="hljs-operator">=&gt;</span>
+  <span class="hljs-keyword">if</span> x0 = x1
+  <span class="hljs-keyword">then</span> loop2(xs, x0, i0+<span class="hljs-number">1</span>, res)
+  <span class="hljs-keyword">else</span> loop2(xs, x1, <span class="hljs-number">1</span>, cons((i0, x0), res))
+) <span class="hljs-comment">(* end of [loop2] *)</span>
+}
+</code></pre>
+<p>For each iword-value in <code>iwords</code>, the int-value indicates the number of
+times the string-value appears in <code>words</code>.</p>
+<p>We can now sort <code>iwords</code> based on a specific order:</p>
+<pre><code class="hljs css language-ats"><span class="hljs-keyword">val</span> iwords =
+(
+mergesort(iwords)
+) <span class="hljs-keyword">where</span>
+{
+<span class="hljs-keyword">implement</span>
+list0_mergesort<span class="hljs-meta">$cmp</span><span class="hljs-class">&lt;<span class="hljs-title">iword</span>&gt;</span>
+  (iw1, iw2) =
+<span class="hljs-keyword">let</span>
+  <span class="hljs-keyword">val</span> i1 = iw1<span class="hljs-number">.0</span>
+  <span class="hljs-keyword">val</span> i2 = iw2<span class="hljs-number">.0</span>
+<span class="hljs-keyword">in</span>
+  <span class="hljs-keyword">if</span> i1 &gt; i2 <span class="hljs-keyword">then</span> ~<span class="hljs-number">1</span> <span class="hljs-keyword">else</span> (<span class="hljs-keyword">if</span> i1 &lt; i2 <span class="hljs-keyword">then</span> <span class="hljs-number">1</span> <span class="hljs-keyword">else</span> compare(iw1<span class="hljs-number">.1</span>, iw2<span class="hljs-number">.1</span>))
+<span class="hljs-keyword">end</span>
+}
+</code></pre>
+<p>Note that the specified order indicates that one iword-value <code>iw1</code> is
+less than another one <code>iw2</code> if the int-value in <code>iw1</code> is greater than
+that in <code>iw2</code> or the two int-values are equal and the string-value in
+<code>iw1</code> is less than that in <code>iw2</code>.</p>
+<p>Let print out the first 250 (or fewer) words together with their
+frquencies:</p>
+<pre><code class="hljs css language-ats"><span class="hljs-comment">//</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> </span>N <span class="hljs-number">250</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-keyword">val</span>
+_<span class="hljs-comment">(*bool*)</span> =
+(
+list0_iforall(iwords)
+) <span class="hljs-keyword">where</span>
+{
+<span class="hljs-keyword">implement</span>
+list0_iforall<span class="hljs-meta">$test</span><span class="hljs-class">&lt;<span class="hljs-title">iword</span>&gt;</span>
+  (i0, iw) =
+<span class="hljs-keyword">if</span>
+(i0 &lt; N)
+<span class="hljs-keyword">then</span> (println<span class="hljs-operator">!</span>(<span class="hljs-string">"word#"</span>, i0+<span class="hljs-number">1</span>, <span class="hljs-string">": "</span>, iw<span class="hljs-number">.1</span>, <span class="hljs-string">"("</span>, iw<span class="hljs-number">.0</span>, <span class="hljs-string">")"</span>); <span class="hljs-literal">true</span>)
+<span class="hljs-keyword">else</span> <span class="hljs-literal">false</span>
+} <span class="hljs-comment">(* end of [val] *)</span>
+<span class="hljs-comment">//</span>
+</code></pre>
+<p>One can execute <code>make</code> to generate <code>WordFrqncyCnt_dats</code>. For instance,
+the following command-line should count the words in the novel <code>Moby Dick</code>
+by Herman Melville:</p>
+<pre><code class="hljs css language-shell">wget -q -O - "http://www.gutenberg.org/files/2701/2701-0.txt" | ./WordFrqncyCnt_dats
+</code></pre>
+<p>The following output is expected (where each word is followed by its
+frequency in parentheses):</p>
+<pre><code class="hljs css language-text">word#1: the(14715)
+word#2: of(6742)
+word#3: and(6517)
+word#4: a(4805)
+word#5: to(4707)
+word#6: in(4241)
+word#7: that(3100)
+word#8: it(2536)
+word#9: his(2532)
+word#10: i(2127)
+word#11: he(1900)
+word#12: s(1825)
+word#13: but(1823)
+word#14: with(1770)
+word#15: as(1753)
+word#16: is(1751)
+word#17: was(1646)
+word#18: for(1644)
+word#19: all(1545)
+word#20: this(1443)
+word#21: at(1335)
+word#22: whale(1245)
+...
+word#53: man(530)
+word#54: up(526)
+word#55: into(523)
+word#56: ship(519)
+word#57: ahab(517)
+word#58: more(509)
+word#59: if(501)
+word#60: them(474)
+word#61: ye(473)
+word#62: we(469)
+word#63: sea(455)
+word#64: old(452)
+word#65: would(432)
+word#66: other(431)
+...
+word#80: boat(337)
+word#81: long(334)
+word#82: time(334)
+word#83: her(332)
+word#84: captain(329)
+...
+word#106: whales(272)
+word#107: thou(271)
+word#108: after(270)
+word#109: again(263)
+word#110: stubb(261)
+word#111: how(259)
+word#112: did(258)
+word#113: your(258)
+word#114: may(255)
+word#115: queequeg(253)
+word#116: little(249)
+word#117: can(247)
+word#118: round(247)
+word#119: while(246)
+word#120: sperm(245)
+word#121: three(245)
+word#122: men(244)
+word#123: say(244)
+word#124: first(239)
+word#125: through(235)
+word#126: us(234)
+word#127: every(232)
+word#128: well(230)
+word#129: being(225)
+word#130: much(224)
+word#131: where(223)
+word#132: off(220)
+word#133: could(217)
+word#134: good(216)
+word#135: hand(215)
+word#136: same(215)
+word#137: our(211)
+word#138: side(208)
+word#139: ever(206)
+word#140: never(206)
+word#141: himself(205)
+word#142: look(205)
+word#143: own(205)
+word#144: deck(199)
+word#145: starbuck(199)
+word#146: almost(197)
+word#147: go(194)
+word#148: even(193)
+word#149: water(190)
+word#150: thing(188)
+word#151: away(186)
+word#152: should(185)
+word#153: too(185)
+word#154: might(183)
+word#155: come(180)
+word#156: day(179)
+word#157: made(178)
+word#158: pequod(178)
+word#159: life(176)
+word#160: world(176)
+word#161: sir(175)
+word#162: fish(171)
+word#163: many(168)
+word#164: among(167)
+word#165: far(165)
+word#166: seen(165)
+word#167: back(164)
+word#168: without(164)
+word#169: line(160)
+word#170: let(158)
+word#171: oh(157)
+word#172: right(157)
+word#173: cried(156)
+word#174: eyes(156)
+word#175: nor(156)
+word#176: aye(155)
+word#177: god(153)
+word#178: know(153)
+word#179: part(153)
+word#180: night(152)
+...
+word#184: boats(147)
+word#185: air(143)
+word#186: crew(141)
+...
+word#196: whaling(133)
+...
+</code></pre>
+<p>It is not surprising to see the word <code>whale</code> as the first noun in this list
+(word#22): The novel &quot;Moby Dick&quot; is all about whales and whaling!</p>
+<p>Happy programming in ATS-Temptory!!!</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/tmplats-doc/docs/LongestLine"><span class="arrow-prev">← </span><span>Longest Line</span></a><a class="docs-next button" href="/tmplats-doc/docs/CountingWords2"><span>Counting Words (2)</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#intro">Intro</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2019 sparverius</section></footer></div></body></html>
